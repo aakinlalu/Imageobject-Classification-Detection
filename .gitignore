@@ -1,0 +1,11 @@
+*/runs
+*/content 
+*/.ipynb_checkpoints
+*/yolov5s.pt
+*/datasets 
+*/yolov8n.pt
+*/yolov8s.pt 
+.python-version
+.env
+.ipynb_checkpoints
+

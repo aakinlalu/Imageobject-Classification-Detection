@@ -1,0 +1,4 @@
+ultralytics>=8.0.11
+roboflow>=0.2.25
+yolort>=0.6.3
+yolov5>=7.0.6
