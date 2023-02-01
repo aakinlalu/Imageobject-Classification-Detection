@@ -1,0 +1,19 @@
+{
+  "name": "notebook-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.2.0",
+    "@tensorflow/tfjs-node": "^4.2.0",
+    "ml5": "^0.12.2",
+    "onnxruntime-web": "^1.13.1",
+    "yolov5js": "^1.0.0"
+  }
+}

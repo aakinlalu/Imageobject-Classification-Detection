@@ -8,4 +8,7 @@
 .python-version
 .env
 .ipynb_checkpoints
+*/node_modules
+*/*.jpg
+*/test-yolo-js-api.nnb
 
