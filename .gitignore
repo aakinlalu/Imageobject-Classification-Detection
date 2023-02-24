@@ -9,6 +9,7 @@
 .env
 .ipynb_checkpoints
 .parcel-cache
+.DS_Store
 */node_modules
 */*.jpg
 */test-yolo-js-api.nnb
