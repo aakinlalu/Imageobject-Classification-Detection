@@ -13,4 +13,6 @@
 */*.jpg
 */test-yolo-js-api.nnb
 */js_model.html
+notebooks-transformer/*
+*/cv-note.ipynb
 
