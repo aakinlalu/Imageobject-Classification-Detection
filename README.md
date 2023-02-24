@@ -40,3 +40,8 @@ cd notebook-yolov8 && jupyter lab
 cd notebook-yolov8 && code .
 ```
 
+### 6. Use JavaScript API to load and make prediction
+
+#### 6a. Use ml5.js and p5.js -> click [here]('./fine-tuned-model-ml5js-api')
+
+#### 6n. Use ml5.js and p5.js -> click [here]('./fine-tuned-model-tfjs-api')

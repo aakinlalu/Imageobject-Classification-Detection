@@ -8,7 +8,9 @@
 .python-version
 .env
 .ipynb_checkpoints
+.parcel-cache
 */node_modules
 */*.jpg
 */test-yolo-js-api.nnb
+*/js_model.html
 

@@ -1,0 +1,18 @@
+{
+  "name": "javascript-apiv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr --open",
+    "build": "cross-env NODE_ENV=production parcel build --no-scope-hoist index.html --public-url ./",
+    "link-local": "yalc link"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "parcel": "^2.8.3",
+    "yalc": "^1.0.0-pre.53"
+  }
+}
