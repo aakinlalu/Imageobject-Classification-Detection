@@ -34,7 +34,7 @@ const asyncLoadModel = async (model_url)=> {
 }
 
 var model = undefined;
-model_url = 'https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/javascript-api/best_web_model/model.json';
+model_url = 'https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/fine-tuned-model-tfjs-api/best_web_model/model.json';
 
 
 // Check if webcam access is supported.

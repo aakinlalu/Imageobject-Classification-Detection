@@ -15,5 +15,9 @@
     "ml5": "^0.12.2",
     "onnxruntime-web": "^1.13.1",
     "yolov5js": "^1.0.0"
+  },
+  "devDependencies": {
+    "buffer": "^5.7.1",
+    "process": "^0.11.10"
   }
 }
