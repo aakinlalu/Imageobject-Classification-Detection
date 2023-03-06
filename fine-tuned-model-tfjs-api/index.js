@@ -34,7 +34,8 @@ const asyncLoadModel = async (model_url)=> {
 }
 
 var model = undefined;
-model_url = 'https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/fine-tuned-model-tfjs-api/best_web_model/model.json';
+// model_url = 'https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/fine-tuned-model-tfjs-api/best_web_model/model.json';
+model_url ='https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/fine-tuned-model-tfjs-api-small/fine_yolov8n_320_web_model/model.json';
 
 
 // Check if webcam access is supported.
@@ -97,15 +98,22 @@ const predictWebcam = () => {
 
   let [modelWidth, modelHeight] = model.inputs[0].shape.slice(1, 3);
 
+  console.log('modelWidth: ', modelWidth, 'modelHeight: ', modelHeight)
+
   // tf.tidy will clean up any GPU memory we used when this function is done.
   const input = tf.tidy(() => {
-      return tf.image.resizeBilinear(tf.browser.fromPixels(video), [modelWidth, modelHeight])
-        .div(255.0).expandDims(0);
+      tfimg= tf.image.resizeBilinear(tf.browser.fromPixels(video), [modelWidth, modelHeight])
+      return tfimg.transpose([0,1,2]).expandDims();
     });
+
+    input.print()
+    console.log('input: ', input.shape)
 
 
   // Now let's start classifying a frame in the stream.
   model.executeAsync(input).then((predictions) => {
+       console.log(predictions.shape)
+       console.log(predictions.squeeze().arraySync())
 
       const [boxes, scores, classes, valid_detections] = predictions;
       const boxes_data = boxes.dataSync();

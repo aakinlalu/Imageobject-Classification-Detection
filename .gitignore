@@ -18,6 +18,8 @@ notebooks-transformer/*
 */cv-note.ipynb
 dist 
 */dist 
+notebooks-yolov5-mobile 
+notebooks-yolov8-mobile
 
 
 
