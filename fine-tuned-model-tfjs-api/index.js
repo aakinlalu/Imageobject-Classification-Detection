@@ -14,15 +14,7 @@ var vidHeight = 0;
 var xStart = 0;
 var yStart = 0;
 
-const names = ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light',
-               'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow',
-               'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee',
-               'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard',
-               'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple',
-               'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch',
-               'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone',
-               'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear',
-               'hair drier', 'toothbrush']
+const names = ['Bin', 'Bottles', 'Car', 'Computer', 'Face Mask', 'Fire Extinguisher', 'Powerpoint']
 
 //Function Loads the GraphModel type model of
 const asyncLoadModel = async (model_url)=> {
@@ -35,7 +27,8 @@ const asyncLoadModel = async (model_url)=> {
 
 var model = undefined;
 // model_url = 'https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/fine-tuned-model-tfjs-api/best_web_model/model.json';
-model_url ='https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/fine-tuned-model-tfjs-api-small/fine_yolov8n_320_web_model/model.json';
+// model_url ='https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/fine-tuned-model-tfjs-api-small/fine_yolov8n_320_web_model/model.json';
+model_url='https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/fine-tuned-model-tfjs-api-small/fine_yolov5n_320_web_model/model.json'
 
 
 // Check if webcam access is supported.
@@ -113,7 +106,7 @@ const predictWebcam = () => {
   // Now let's start classifying a frame in the stream.
   model.executeAsync(input).then((predictions) => {
        console.log(predictions.shape)
-       console.log(predictions.squeeze().arraySync())
+    //    console.log(predictions.squeeze().arraySync())
 
       const [boxes, scores, classes, valid_detections] = predictions;
       const boxes_data = boxes.dataSync();
@@ -149,7 +142,7 @@ const predictWebcam = () => {
           // console.log("x2: ", x2);
           // console.log("y2: ", y2);
 
-          if (score > 0.2) {
+          if (score > 0.66) {
           
               const p = document.createElement('p');
               p.innerText = classLabel  + ' - with '

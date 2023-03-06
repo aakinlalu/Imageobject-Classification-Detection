@@ -1,0 +1,88 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 0;
+    color: black;
+  }
+  
+  h1 {
+    opacity: 0;
+  }
+  
+  video {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* section {
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+  } */
+  
+  button {
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 30px;
+    background-color: #0060DF;
+    border: solid 1px #0060DF;
+    color: #FFF;
+    pointer-events: all;
+    transition: .2s ease;
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+   
+}
+  
+  .removed {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .invisible {
+    border: 1px solid #B1B1B3;
+    background: white;
+    color: #000;
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  
+  .videoView {
+    position: relative;
+    float: center;
+    width: 100%;
+    margin: 2% 1%;
+    cursor: pointer;
+  }
+  
+  .videoView p {
+    position: absolute;
+    float: center;
+    padding: 5px;
+    background-color: rgba(255, 111, 0, 0.85);
+    color: #FFF;
+    border: 1px dashed rgba(255, 255, 255, 0.7);
+    z-index: 2;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  
+  .highlighter {
+    background: rgba(0, 255, 0, 0.25);
+    border: 1px dashed #fff;
+    z-index: 2;
+    position: absolute;
+    display: grid;
+    place-content: center;
+  }
+  
+  .background {
+    width: 100%;
+    position: fixed;
+    z-index: -1000;
+    left: 0;
+    top: 0;
+    background: black;
+}
