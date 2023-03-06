@@ -26,7 +26,7 @@ const asyncLoadModel = async (model_url)=> {
 }
 
 var model = undefined;
-model_url='https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/fine-tuned-model-tfjs-api-small/fine_yolov5n_320_web_model/model.json';
+model_url='https://raw.githubusercontent.com/aakinlalu/object-classifier-tng/main/fine-tuned-model-tfjs-nano/fine_tuned_320_web_model/model.json';
 
 
 // Check if webcam access is supported.
@@ -135,7 +135,7 @@ const predictWebcam = () => {
           // console.log("x2: ", x2);
           // console.log("y2: ", y2);
 
-          if (score > 0.66) {
+          if (score > 0.70) {
           
               const p = document.createElement('p');
               p.innerText = classLabel  + ' - with '
