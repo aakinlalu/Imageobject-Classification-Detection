@@ -91,6 +91,8 @@ const predictWebcam = () => {
 
   console.log('modelWidth: ', modelWidth, 'modelHeight: ', modelHeight)
 
+  console.log('modelWidth: ', modelWidth, 'modelHeight: ', modelHeight)
+
   // tf.tidy will clean up any GPU memory we used when this function is done.
   const input = tf.tidy(() => {
       tfimg= tf.image.resizeBilinear(tf.browser.fromPixels(video), [modelWidth, modelHeight])
