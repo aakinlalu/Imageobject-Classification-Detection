@@ -20,6 +20,7 @@ dist
 */dist 
 notebooks-yolov5-mobile 
 notebooks-yolov8-mobile
+*/.DS_Store
 
 
 
